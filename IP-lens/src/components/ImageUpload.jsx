@@ -91,11 +91,7 @@ const ImageUpload = () => {
   };
 
   // Takes the Similarity Score (0 to 1) as input
-  const getConfidenceColor = (similarityScore) => {
-    if (similarityScore >= 0.9) return "text-green-500 font-bold"; // 90% or higher is excellent
-    if (similarityScore >= 0.7) return "text-yellow-500 font-bold"; // 70% or higher is good
-    return "text-red-500"; // Below 70% is poor
-  };
+  
 
   // Helper function to create the correct URL path
   const createLocalImageUrl = (filename) => {
@@ -126,7 +122,8 @@ const ImageUpload = () => {
             }
             flex flex-col justify-center items-center p-4 sm:p-8
           `}
-          onClick={handleUploadClick}
+          onClick={() => {handleUploadClick(), handleSearchSimilarity();}}
+          
         >
           <input
             type="file"
@@ -185,7 +182,7 @@ const ImageUpload = () => {
           onClick={handleSearchSimilarity}
           disabled={!isProcessable || isLoading}
           className={`
-             px-8 py-3 rounded-xl font-bold text-lg flex items-center justify-center gap-2
+             px-8 py-3 cursor-pointer hover:bg-blue-600 rounded-xl font-bold text-lg flex items-center justify-center gap-2
             shadow-lg transition-all duration-200 w-full max-w-xs
             ${
               isProcessable && !isLoading
@@ -197,7 +194,7 @@ const ImageUpload = () => {
           {isLoading ? (
             <>Searching Database...</>
           ) : (
-            <>Search for Similar IP Assets</>
+            <>Generate IP Vector</>
           )}
         </button>
       </div>
@@ -221,7 +218,7 @@ const ImageUpload = () => {
                 className=" size-70 object-contain rounded-lg border border-gray-200"
               />
             </div>
-            <span className="text-[#5352B2] font-semibold text-[32px]">{(score * 100).toFixed(2)}%</span>
+            
             <div className=" p-2 rounded-xl bg-blue-100 size-fit">
               <img
                 src={comparedImage}
@@ -235,6 +232,7 @@ const ImageUpload = () => {
               />
             </div>
           </div>
+          <span className="mt-4 font-semibold text-[32px] bg-[#615FFF] rounded-md text-white text-sm  text-center  w-full">Similar Score: {(score * 100).toFixed(2)}%</span>
           <button
             onClick={() => setComparedImage(null)}
             className="mt-6 px-4 py-2 text-sm bg-[#5352B2] text-white rounded-lg hover:bg-[#7371ce] transition-colors shadow-md"
@@ -284,7 +282,7 @@ const ImageUpload = () => {
                   return (
                     <div
                       // FIX: Wrapped the state setter in an anonymous function so it only runs on click
-                      onClick={() => {setComparedImage(resultImageUrl) ; setScore(similarityScore);}}
+                      
                       key={result.id}
                       className="p-5 rounded-xl shadow-lg flex flex-col sm:flex-row gap-4 border-l-4 border-[#5352B2] hover:shadow-2xl transition-shadow cursor-pointer hover:bg-indigo-50"
                      >
@@ -314,17 +312,10 @@ const ImageUpload = () => {
                         </p>
 
                         <div className="flex justify-between items-center text-sm">
-                          <span className="text-gray-600 font-medium">
-                            Similarity Score:
-                          </span>
-                          <span
-                            className={`${getConfidenceColor(
-                              similarityScore
-                            )} text-lg`}
-                          >
-                            {(similarityScore * 100).toFixed(2)}%{" "}
-                            {/* Display as percentage */}
-                          </span>
+                          <button onClick={() => {setComparedImage(resultImageUrl) ; setScore(similarityScore);}} className="bg-blue-600 p-2 cursor-pointer rounded-md hover:bg-blue-700 text-white font-medium">
+                          Check Similarity Score
+                          </button>
+                      
                         </div>
                       </div>
                     </div>
