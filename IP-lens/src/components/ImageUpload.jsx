@@ -232,7 +232,7 @@ const ImageUpload = () => {
               />
             </div>
           </div>
-          <span className="mt-4 font-semibold text-[32px] bg-[#615FFF] rounded-md text-white text-sm  text-center  w-full">Similar Score: {(score * 100).toFixed(2)}%</span>
+          <span className="mt-4 font-semibold  bg-[#615FFF] rounded-md text-white text-base p-3  text-center  w-full">Similarity Score: {(score * 100).toFixed(2)}%</span>
           <button
             onClick={() => setComparedImage(null)}
             className="mt-6 px-4 py-2 text-sm bg-[#5352B2] text-white rounded-lg hover:bg-[#7371ce] transition-colors shadow-md"
