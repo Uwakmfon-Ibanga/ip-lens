@@ -1,0 +1,221 @@
+<svg width="800" height="800" xmlns="http://www.w3.org/2000/svg">
+      <defs>
+        <linearGradient id="bg-gradient" x1="0%" y1="0%" x2="100%" y2="100%">
+          <stop offset="0%" style="stop-color:#43e97b;stop-opacity:1" />
+          <stop offset="100%" style="stop-color:#38f9d7;stop-opacity:1" />
+        </linearGradient>
+      </defs>
+      
+      <!-- Background -->
+      <rect width="800" height="800" fill="url(#bg-gradient)" />
+      
+      <!-- Title (with wrapping) -->
+      
+        <text 
+          x="400" 
+          y="111" 
+          font-family="Arial, sans-serif" 
+          font-size="48" 
+          font-weight="bold" 
+          fill="white" 
+          text-anchor="middle"
+        >
+          Quantum Krump
+        </text>
+      
+      
+      <!-- Poem Text (with wrapping) -->
+      
+        <text 
+          x="400" 
+          y="209" 
+          font-family="Georgia, serif" 
+          font-size="24" 
+          fill="white" 
+          text-anchor="middle"
+          opacity="0.95"
+        >
+          In the club, the bass drops,
+        </text>
+      
+        <text 
+          x="400" 
+          y="245" 
+          font-family="Georgia, serif" 
+          font-size="24" 
+          fill="white" 
+          text-anchor="middle"
+          opacity="0.95"
+        >
+          A particle accelerator for the soul.
+        </text>
+      
+        <text 
+          x="400" 
+          y="281" 
+          font-family="Georgia, serif" 
+          font-size="24" 
+          fill="white" 
+          text-anchor="middle"
+          opacity="0.95"
+        >
+          Bodies collide, not with force, but with
+        </text>
+      
+        <text 
+          x="400" 
+          y="317" 
+          font-family="Georgia, serif" 
+          font-size="24" 
+          fill="white" 
+          text-anchor="middle"
+          opacity="0.95"
+        >
+          probability,
+        </text>
+      
+        <text 
+          x="400" 
+          y="353" 
+          font-family="Georgia, serif" 
+          font-size="24" 
+          fill="white" 
+          text-anchor="middle"
+          opacity="0.95"
+        >
+          Entangled limbs, a superposition of moves.
+        </text>
+      
+        <text 
+          x="400" 
+          y="389" 
+          font-family="Georgia, serif" 
+          font-size="24" 
+          fill="white" 
+          text-anchor="middle"
+          opacity="0.95"
+        >
+          Each pop and lock, a quantum leap,
+        </text>
+      
+        <text 
+          x="400" 
+          y="425" 
+          font-family="Georgia, serif" 
+          font-size="24" 
+          fill="white" 
+          text-anchor="middle"
+          opacity="0.95"
+        >
+          A wave function collapsing into pure energy.
+        </text>
+      
+        <text 
+          x="400" 
+          y="461" 
+          font-family="Georgia, serif" 
+          font-size="24" 
+          fill="white" 
+          text-anchor="middle"
+          opacity="0.95"
+        >
+          Sweat, a fine mist of Uncertainty,
+        </text>
+      
+        <text 
+          x="400" 
+          y="497" 
+          font-family="Georgia, serif" 
+          font-size="24" 
+          fill="white" 
+          text-anchor="middle"
+          opacity="0.95"
+        >
+          Hanging heavy in the neon glow.
+        </text>
+      
+        <text 
+          x="400" 
+          y="533" 
+          font-family="Georgia, serif" 
+          font-size="24" 
+          fill="white" 
+          text-anchor="middle"
+          opacity="0.95"
+        >
+          Krumpers, mystics of the mosh pit,
+        </text>
+      
+        <text 
+          x="400" 
+          y="569" 
+          font-family="Georgia, serif" 
+          font-size="24" 
+          fill="white" 
+          text-anchor="middle"
+          opacity="0.95"
+        >
+          Channeling Planck&apos;s constant through their
+        </text>
+      
+        <text 
+          x="400" 
+          y="605" 
+          font-family="Georgia, serif" 
+          font-size="24" 
+          fill="white" 
+          text-anchor="middle"
+          opacity="0.95"
+        >
+          spines.
+        </text>
+      
+        <text 
+          x="400" 
+          y="641" 
+          font-family="Georgia, serif" 
+          font-size="24" 
+          fill="white" 
+          text-anchor="middle"
+          opacity="0.95"
+        >
+          Breaking down, breaking out,
+        </text>
+      
+        <text 
+          x="400" 
+          y="677" 
+          font-family="Georgia, serif" 
+          font-size="24" 
+          fill="white" 
+          text-anchor="middle"
+          opacity="0.95"
+        >
+          Rearranging the very fabric of the dance
+        </text>
+      
+        <text 
+          x="400" 
+          y="713" 
+          font-family="Georgia, serif" 
+          font-size="24" 
+          fill="white" 
+          text-anchor="middle"
+          opacity="0.95"
+        >
+          floor,
+        </text>
+      
+        <text 
+          x="400" 
+          y="749" 
+          font-family="Georgia, serif" 
+          font-size="24" 
+          fill="white" 
+          text-anchor="middle"
+          opacity="0.95"
+        >
+          One quantized beat at a time.
+        </text>
+      
+    </svg>

@@ -1,0 +1,53 @@
+<svg width="800" height="800" xmlns="http://www.w3.org/2000/svg">
+      <defs>
+        <linearGradient id="bg-gradient" x1="0%" y1="0%" x2="100%" y2="100%">
+          <stop offset="0%" style="stop-color:#fa709a;stop-opacity:1" />
+          <stop offset="100%" style="stop-color:#fee140;stop-opacity:1" />
+        </linearGradient>
+      </defs>
+      
+      <!-- Background -->
+      <rect width="800" height="800" fill="url(#bg-gradient)" />
+      
+      <!-- Title (with wrapping) -->
+      
+        <text 
+          x="400" 
+          y="363" 
+          font-family="Arial, sans-serif" 
+          font-size="48" 
+          font-weight="bold" 
+          fill="white" 
+          text-anchor="middle"
+        >
+          Quantum Krump
+        </text>
+      
+      
+      <!-- Poem Text (with wrapping) -->
+      
+        <text 
+          x="400" 
+          y="461" 
+          font-family="Georgia, serif" 
+          font-size="24" 
+          fill="white" 
+          text-anchor="middle"
+          opacity="0.95"
+        >
+          Electrons dance wild,
+        </text>
+      
+        <text 
+          x="400" 
+          y="497" 
+          font-family="Georgia, serif" 
+          font-size="24" 
+          fill="white" 
+          text-anchor="middle"
+          opacity="0.95"
+        >
+          Nanosecond, Krump
+        </text>
+      
+    </svg>
