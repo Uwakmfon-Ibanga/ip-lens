@@ -1,4 +1,4 @@
-import React, { useState, useRef, useMemo } from "react";
+import React, { useState, useRef, useMemo, useEffect } from "react";
 
 const ImageUpload = () => {
   const [uploadedFile, setUploadedFile] = useState(null);
@@ -10,6 +10,7 @@ const ImageUpload = () => {
   });
   // State to hold the URL of the image selected for comparison
   const [comparedImage, setComparedImage] = useState(null);
+  const [comparedImageId, setComparedImageId] = useState(null)
   
 
   // New state for search results
@@ -97,6 +98,10 @@ const ImageUpload = () => {
   const createLocalImageUrl = (filename) => {
     return `${API_BASE_URL}/assets/${filename}`;
   };
+
+  useEffect(() => {
+    alert('we had issuies hosting the backend because the memory it uses exceeds the free tier of . Please make sure you have FastAPI backend running at http://localhost:8000 . If you need help, refer to the GitHub repository README for setup instructions.')
+  }, []);
 
   return (
     <div className="flex flex-wrap justify-center gap-9 bg-gray-100 p-1 sm:p-8 min-h-screen">
@@ -211,25 +216,27 @@ const ImageUpload = () => {
       {comparedImage && (
         <div className="flex flex-col items-center justify-center p-4 rounded-2xl w-full h-fit top-4">
           <div className="flex gap-3 items-center">
-            <div className=" p-2 rounded-xl bg-blue-100 size-fit">
+            <div className="  w-1/2">
               <img
                 src={fileDataUrl}
                 alt="Query Image"
-                className=" size-70 object-contain rounded-lg border border-gray-200"
+                className=" size-70 object-contain rounded-lg border border-gray-200 p-2 rounded-xl bg-blue-100"
               />
+              <p className="text-xs">{fileDetails.name || "N/A"}</p>
             </div>
             
-            <div className=" p-2 rounded-xl bg-blue-100 size-fit">
+            <div className=" w-1/2">
               <img
                 src={comparedImage}
-                alt="Compared Image"
-                className=" size-70 object-contain rounded-lg border border-gray-200"
+                alt="Compared Image "
+                className=" size-70 object-contain rounded-lg border border-gray-200 p-2 rounded-xl bg-blue-100"
                 onError={(e) => {
                   e.target.onerror = null;
                   e.target.src =
                     "https://placehold.co/256x256/f0f4f8/94a3b8?text=NO+IMG";
                 }}
               />
+              <p className="text-xs truncate overflow-hidden whitespace-nowrap">{comparedImageId || "N/A"}</p>
             </div>
           </div>
           <span className="mt-4 font-semibold  bg-[#615FFF] rounded-md text-white text-base p-3  text-center  w-full">Similarity Score: {(score * 100).toFixed(2)}%</span>
@@ -312,7 +319,7 @@ const ImageUpload = () => {
                         </p>
 
                         <div className="flex justify-between items-center text-sm">
-                          <button onClick={() => {setComparedImage(resultImageUrl) ; setScore(similarityScore);}} className="bg-blue-600 p-2 cursor-pointer rounded-md hover:bg-blue-700 text-white font-medium">
+                          <button onClick={() => {setComparedImage(resultImageUrl) ; setScore(similarityScore); setComparedImageId(result.id)}} className="bg-blue-600 p-2 cursor-pointer rounded-md hover:bg-blue-700 text-white font-medium">
                           Check Similarity Score
                           </button>
                       
